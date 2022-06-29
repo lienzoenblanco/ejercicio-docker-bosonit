@@ -1,7 +1,5 @@
 package com.example.ej2crud.application;
 
-import com.example.ej2crud.application.dto.ResponseDto;
-import com.example.ej2crud.infraestructure.dto.input.InputPersonDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputPersonDto;
 import com.example.ej2crud.domain.Person;
 import com.example.ej2crud.infraestructure.repository.PersonRepository;
