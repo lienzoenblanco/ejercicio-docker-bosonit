@@ -14,7 +14,7 @@ public class UpdateStudentUseCase {
         this.studentRepository = studentRepository;
     }
 
-    public Boolean update(InputStudentDto inputStudentDto, int id){
+    public boolean update(InputStudentDto inputStudentDto, int id){
         List<Student> studentList = this.studentRepository.findById(id);
         Student student = studentList.get(0);
         student.setName(inputStudentDto.getName());

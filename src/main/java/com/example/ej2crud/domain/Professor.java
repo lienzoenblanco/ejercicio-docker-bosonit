@@ -1,7 +1,10 @@
 package com.example.ej2crud.domain;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table
 public class Professor {
@@ -11,12 +14,17 @@ public class Professor {
     @Column(name = "professor_id", nullable = false, unique = true)
     private int professor_id;
 
-    @Column(name = "person_id")
-    private int person_id;
+    @OneToOne
+    @JoinColumn(name = "person_id")
+    private Person person;
+
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "comments")
     private String comments;
 
     @Column(name = "branch")
     private String branch;
+
 }

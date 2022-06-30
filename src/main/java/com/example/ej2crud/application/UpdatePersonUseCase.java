@@ -16,8 +16,8 @@ public class UpdatePersonUseCase extends PersonUseCase{
         super(personRepository);
     }
 
-    public Boolean update(InputPersonDto inputPersonDto, int id) {
-        List<Person> personList = this.personRepository.findById(id);
+    public boolean update(InputPersonDto inputPersonDto, int id) {
+        List<Person> personList = personRepository.findById(id);
         if (personList == null){
             throw new NotFoundException("El id no existe");
         }

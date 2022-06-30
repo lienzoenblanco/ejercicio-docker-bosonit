@@ -27,11 +27,9 @@ public class Student {
     @Column(name = "comments")
     private String comments;
 
-/*
-    @ManyToMany(fetch=FetchType.LAZY)
-    @JoinColumn(name = "id")
-    private int professor_id;
-*/
+//    @OneToMany(fetch=FetchType.LAZY)
+//    @JoinColumn(name = "professor_id")
+//    private Professor professor;
 
     @Column(name = "branch")
     private String branch;
