@@ -1,4 +1,4 @@
-package com.example.ej2crud.application;
+package com.example.ej2crud.application.professor;
 
 import com.example.ej2crud.application.dto.ResponseDto;
 import com.example.ej2crud.domain.Professor;

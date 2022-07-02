@@ -14,7 +14,7 @@ public class Professor {
     @Column(name = "professor_id", nullable = false, unique = true)
     private int professor_id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id")
     private Person person;
 
@@ -26,5 +26,4 @@ public class Professor {
 
     @Column(name = "branch")
     private String branch;
-
 }

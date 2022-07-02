@@ -1,7 +1,7 @@
 package com.example.ej2crud.infraestructure.controller;
 
-import com.example.ej2crud.application.*;
 import com.example.ej2crud.application.exceptions.NotFoundException;
+import com.example.ej2crud.application.person.*;
 import com.example.ej2crud.infraestructure.dto.input.InputPersonDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputCustomErrorDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputPersonDto;

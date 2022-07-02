@@ -40,13 +40,14 @@ public class Person {
     private Boolean active = true;
 
     @Column(name = "created_date")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date created_date;
 
     @Column(name = "image_url")
     private String image_url;
 
     @Column(name = "termination_date")
+    @Temporal(TemporalType.DATE)
     private Date termination_date;
 
 }

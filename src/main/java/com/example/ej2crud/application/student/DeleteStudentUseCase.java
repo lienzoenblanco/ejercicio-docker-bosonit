@@ -1,4 +1,4 @@
-package com.example.ej2crud.application;
+package com.example.ej2crud.application.student;
 
 import com.example.ej2crud.infraestructure.repository.StudentRepository;
 import org.springframework.stereotype.Service;

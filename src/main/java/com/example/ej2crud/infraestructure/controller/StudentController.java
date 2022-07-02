@@ -1,7 +1,7 @@
 package com.example.ej2crud.infraestructure.controller;
 
-import com.example.ej2crud.application.*;
 import com.example.ej2crud.application.dto.ResponseDto;
+import com.example.ej2crud.application.student.*;
 import com.example.ej2crud.infraestructure.dto.input.InputStudentDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputStudentFullDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputStudentSimpleDto;

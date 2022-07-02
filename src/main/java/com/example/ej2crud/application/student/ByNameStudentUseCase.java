@@ -1,21 +1,19 @@
-package com.example.ej2crud.application;
+package com.example.ej2crud.application.student;
 
 import com.example.ej2crud.domain.Student;
 import com.example.ej2crud.infraestructure.dto.output.OutputStudentFullDto;
 import com.example.ej2crud.infraestructure.repository.StudentRepository;
-import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ByIdStudentUseCase {
+public class ByNameStudentUseCase {
     public StudentRepository studentRepository;
-    ByIdStudentUseCase(StudentRepository studentRepository){
+    ByNameStudentUseCase(StudentRepository studentRepository){
         this.studentRepository = studentRepository;
     }
-
     private OutputStudentFullDto serialize(Student student) {
         OutputStudentFullDto output = new OutputStudentFullDto();
         output.setStudent_id(student.getStudent_id());
@@ -37,9 +35,8 @@ public class ByIdStudentUseCase {
         return output;
     }
 
-    public OutputStudentFullDto getById(int id) {
-        List<Student> studentList = this.studentRepository.findById(id);
-        return this.serialize(studentList.get(0));
+    public OutputStudentFullDto findByName(String name) {
+        List<Student> studentList = this.studentRepository.findByName(name);
+    return this.serialize(studentList.get(0));
     }
-
 }

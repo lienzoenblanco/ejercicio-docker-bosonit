@@ -14,7 +14,7 @@ public class Student {
     @Column(name = "student_id", nullable = false, unique = true)
     private int student_id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id")
     private Person person;
 
@@ -27,9 +27,9 @@ public class Student {
     @Column(name = "comments")
     private String comments;
 
-//    @OneToMany(fetch=FetchType.LAZY)
-//    @JoinColumn(name = "professor_id")
-//    private Professor professor;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "professor_id")
+    private Professor professor;
 
     @Column(name = "branch")
     private String branch;

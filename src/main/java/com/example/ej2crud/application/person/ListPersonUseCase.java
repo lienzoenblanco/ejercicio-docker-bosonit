@@ -1,4 +1,4 @@
-package com.example.ej2crud.application;
+package com.example.ej2crud.application.person;
 
 import com.example.ej2crud.domain.Person;
 import com.example.ej2crud.infraestructure.dto.output.OutputPersonDto;
@@ -8,13 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ByNamePersonUseCase extends PersonUseCase{
+public class ListPersonUseCase extends PersonUseCase {
 
-    ByNamePersonUseCase(PersonRepository personRepository) {
+    ListPersonUseCase(PersonRepository personRepository) {
         super(personRepository);
     }
-    public List<OutputPersonDto> findByName(String name) {
-        List<Person> personList = this.personRepository.findByName(name);
+
+    public List<OutputPersonDto> list() {
+        List<Person> personList= this.personRepository.findAll();
         return this.serialize(personList);
     }
 }

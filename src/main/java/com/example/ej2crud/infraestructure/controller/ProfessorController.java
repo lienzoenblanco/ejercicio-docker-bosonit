@@ -1,13 +1,12 @@
 package com.example.ej2crud.infraestructure.controller;
 
-import com.example.ej2crud.application.*;
 import com.example.ej2crud.application.dto.ResponseDto;
+import com.example.ej2crud.application.professor.*;
 import com.example.ej2crud.infraestructure.dto.input.InputProfessorDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputProfessorDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.ej2crud.application;
+package com.example.ej2crud.application.person;
 
 import com.example.ej2crud.application.dto.ResponseDto;
 import com.example.ej2crud.application.exceptions.UnprocessableException;
@@ -8,7 +8,7 @@ import com.example.ej2crud.infraestructure.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AddPersonUseCase extends PersonUseCase{
+public class AddPersonUseCase extends PersonUseCase {
 
     AddPersonUseCase(PersonRepository personRepository) {
         super(personRepository);

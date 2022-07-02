@@ -1,4 +1,4 @@
-package com.example.ej2crud.application;
+package com.example.ej2crud.application.person;
 
 import com.example.ej2crud.infraestructure.dto.output.OutputPersonDto;
 import com.example.ej2crud.domain.Person;
