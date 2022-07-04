@@ -3,6 +3,8 @@ package com.example.ej2crud.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -33,4 +35,11 @@ public class Student {
 
     @Column(name = "branch")
     private String branch;
+
+    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    private List<Subject> subjectList = new ArrayList<>();
+
+    public void addSubject (Subject subject) {
+        subjectList.add(subject);
+    }
 }

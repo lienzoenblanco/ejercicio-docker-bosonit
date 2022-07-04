@@ -5,6 +5,7 @@ import com.example.ej2crud.application.student.*;
 import com.example.ej2crud.infraestructure.dto.input.InputStudentDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputStudentFullDto;
 import com.example.ej2crud.infraestructure.dto.output.OutputStudentSimpleDto;
+import com.example.ej2crud.infraestructure.dto.output.OutputSubjectDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -65,4 +66,24 @@ public class StudentController {
   @Autowired private DeleteStudentUseCase deleteStudentUseCase;
   @DeleteMapping("/{id}")
   public void delete(@PathVariable int id) {this.deleteStudentUseCase.delete(id);}
+
+  @Autowired private AddSubjectsStudentUseCase addSubjectsStudentUseCase;
+  @PutMapping("/student/{id}/subject-list")
+  public List<OutputSubjectDto> addSubjectList(
+          @PathVariable("id") String id,
+          @RequestBody List<String> idSubjects
+  ) {
+
+    return addSubjectsStudentUseCase.addList(Integer.parseInt(id), idSubjects);
+  }
+
+  @Autowired private DeleteSubjectsStudentUseCase deleteSubjectsStudentUseCase;
+  @DeleteMapping("/student/{id}/subject-list/")
+  public List<OutputSubjectDto> deleteSubjectsList(
+          @PathVariable("id") String id,
+          @RequestBody List<String> idSubjects
+  ) {
+
+    return deleteSubjectsStudentUseCase.deleteList(Integer.parseInt(id), idSubjects);
+  }
 }
